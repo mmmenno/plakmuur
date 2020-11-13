@@ -1,0 +1,28 @@
+body{
+	background-image: url("wall.png");
+	padding: 80px 40px;
+}
+
+.doel1{
+	background-color: #ccc;
+	border: 15px solid #666;
+	padding: 20px;
+}
+
+.doel2{
+	background-color: #666;
+	border: 12px solid #ccc;
+	color: #fff;
+	padding: 20px;
+}
+.doel2 a{
+	color: #fff;
+	font-style: italic;
+}
+
+.doel3{
+	background-color: #eceaed;
+	border: 12px solid #595959;
+	color: #888789;
+	padding: 20px;
+}

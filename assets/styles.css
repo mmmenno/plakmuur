@@ -1,6 +1,6 @@
 body{
 	background-image: url("wall.png");
-	padding: 80px 40px;
+	padding: 100px 100px;
 }
 
 .doel1{
@@ -25,4 +25,11 @@ body{
 	border: 12px solid #595959;
 	color: #888789;
 	padding: 20px;
+}
+
+.poster{
+	position: absolute;
+}
+img{
+	width: 110%;
 }

@@ -30,6 +30,66 @@
 		
 		<div class="col-md-4">
 			
+			
+
+		</div>
+		
+		<div class="col-md-4">
+			
+			<div class="done1" style="margin-top: 16px; margin-left: -23px; transform: rotate(-1deg);">
+				<h1>IISG plakmuur</h1>
+				<strong>De 114.268 affiches van het IISG zijn te doorzoeken op topic (film, music, aids, environmentalism), plaats (Amsterdam, China) en jaar.</strong>
+
+				<br />
+				<br />
+
+				<ul>
+					<li><a href="iisg/?year=1900">year=1900</a></li>
+					<li><a href="iisg/?place=china">place=china</a></li>
+					<li><a href="iisg/?topic=enviro">topic=enviro</a></li>
+					<li><a href="iisg/?topic=film&year=1976&place=amster">topic=film&year=1976&place=amster</a></li>
+				</ul>
+				
+				De parameters kunnen naar believen gecombineerd of weggelaten worden. Voor place en topic  kan ook een deel van een woord gebruikt worden.
+
+				<br />
+				<br />
+
+				<a href="https://api.druid.datalegend.net/s/GQBsDWYw0">Zo</a> sparql je een lijst van alle topics.
+				<br />
+				<br />
+			</div>
+
+		</div>
+		
+		<div class="col-md-4">
+			
+			<div class="done2" style="margin-top: -3px; margin-left: 3px; transform: rotate(3deg);">
+				<h1>EYE plakmuur</h1>
+				<strong>De eye posters, geschraapt uit ...</strong>
+
+				<br />
+				<br />
+
+				<ul>
+					<li><a href="eye/">bekijk de filmposters!</a></li>
+				</ul>
+				
+				We zijn ook aan het kijken of we deze posters kunnen verbinden met films, en misschien ook met bioscopen. Later meer!
+
+				<br />
+				<br />
+				<br />
+				<br />
+			</div>
+
+		</div>
+	</div>
+
+	<div class="row">
+		
+		<div class="col-md-4">
+			
 			<div class="doel1" style="margin-top: -8px;">
 				<h1>Uit in R'dam</h1>
 				<p>

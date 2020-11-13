@@ -114,11 +114,12 @@ foreach ($data['results']['bindings'] as $k => $v) {
 				$top = rand(-25,25);
 				$left = rand(-25,25);
 				$z = rand(1,100);
+                $rotate = rand(-2,2);
 			?>
 				
 			<div class="col-md-3">
 				
-				<div class="poster" style="margin-top: <?= $top ?>px; z-index: <?= $z ?>; margin-left: <?= $left ?>px;">
+				<div class="poster" style="margin-top: <?= $top ?>px; z-index: <?= $z ?>; margin-left: <?= $left ?>px; transform: rotate(<?= $rotate ?>deg);">
 					<img src="<?= $v['img'] ?>" />
 					<div class="metadata">
 						<h3><?= $v['title'] ?></h3>

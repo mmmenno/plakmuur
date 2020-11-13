@@ -26,6 +26,25 @@ body{
 	color: #888789;
 	padding: 20px;
 }
+.done1{
+	border: 15px solid #c17cf0;
+	background-image: linear-gradient(red, yellow);
+	padding: 20px;
+}
+.done1 a{
+	color: #915eb5;
+	font-weight: bold;
+}
+.done2{
+	border: 15px solid #fe368e;
+	background-image: linear-gradient(#a362b5, #6bc9d5);
+	padding: 20px;
+}
+.done2 a{
+	color: #fff;
+	font-weight: bold;
+}
+
 
 .poster{
 	position: absolute;

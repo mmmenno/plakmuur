@@ -9,32 +9,46 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX iisg: <https://iisg.amsterdam/vocab/>
-SELECT ?poster ?begin ?end ?name ?description ?thumb WHERE {
-  ?poster rdf:type <https://iisg.amsterdam/vocab/Poster> .
-  ?poster iisg:topic <https://iisg.amsterdam/authority/topic/83052> .
-  ?poster iisg:period ?period .
-  ?period iisg:begin ?begin .
-  ?period iisg:end ?end .
-  ?poster schema:name ?name .
-  optional{
-  	?poster schema:description ?description .
-  }
-  ?poster schema:about ?place .
-  ?place a schema:Place .
-  ?place schema:name ?placename .
-  ?poster foaf:depiction ?imginfo .
-  ?imginfo foaf:thumbnail ?thumb .
-  ?thumb <https://iisg.amsterdam/vocab/access> ?rights .
-  FILTER(STR(?rights)=\"open\")
-  FILTER REGEX(?placename,\"amst\",\"i\")
-  FILTER (year(?begin) <= 1977)
-  FILTER (year(?end) >= 1977)
-  
+SELECT ?poster ?begin ?end ?name ?description ?thumb (SAMPLE(?topiclabel) AS ?tl) WHERE {
+	?poster rdf:type <https://iisg.amsterdam/vocab/Poster> .
+	?poster iisg:topic ?topic .
+  	?topic rdfs:label ?topiclabel .
+	?poster iisg:period ?period .
+	?period iisg:begin ?begin .
+	?period iisg:end ?end .
+	?poster schema:name ?name .
+	optional{
+		?poster schema:description ?description .
+	}
+	?poster schema:about ?place .
+	?place a schema:Place .
+	?place schema:name ?placename .
+	?poster foaf:depiction ?imginfo .
+	?imginfo foaf:thumbnail ?thumb .
+	?thumb <https://iisg.amsterdam/vocab/access> ?rights .
+	FILTER(STR(?rights)=\"open\")";
+if(isset($_GET['place'])){
+  	$sparqlQueryString .= "
+  	FILTER REGEX(?placename,\"" . $_GET['place'] . "\",\"i\")";
+}
+if(isset($_GET['topic'])){
+  	$sparqlQueryString .= "
+  	FILTER REGEX(?topiclabel,\"" . $_GET['topic'] . "\",\"i\")";
+}
+if(isset($_GET['year'])){
+	$sparqlQueryString .= "
+	FILTER (year(?begin) <= " . $_GET['year'] . ")
+  	FILTER (year(?end) >= " . $_GET['year'] . ")
+  	";
+} 
+$sparqlQueryString .= "
 } 
 group by ?poster ?begin ?end ?name ?description ?thumb
-order by desc(?nr)
-LIMIT 2500
+order by RAND()
+LIMIT 20
 ";
+
+//echo $sparqlQueryString;
 
 $endpoint = 'https://api.druid.datalegend.net/datasets/IISG/iisg-kg/services/iisg-kg/sparql';
 
@@ -50,6 +64,9 @@ foreach ($data['results']['bindings'] as $k => $v) {
 		"link" => $v['poster']['value'],
 		"img" => $v['thumb']['value'],
 		"place" => $v['placename']['value'],
+		"begin" => $v['begin']['value'],
+		"topic" => $v['tl']['value'],
+		"end" => $v['end']['value'],
 		"title" => $v['name']['value'],
 		"description" => $v['description']['value']
 	);
@@ -103,6 +120,12 @@ foreach ($data['results']['bindings'] as $k => $v) {
 				
 				<div class="poster" style="margin-top: <?= $top ?>px; z-index: <?= $z ?>; margin-left: <?= $left ?>px;">
 					<img src="<?= $v['img'] ?>" />
+					<div class="metadata">
+						<h3><?= $v['title'] ?></h3>
+						<?= $v['description'] ?>
+						<p>
+						<?= $v['begin'] ?> - <?= $v['end'] ?> | <?= $v['topic'] ?> | <?= $v['place'] ?>
+					</div>
 				</div>
 
 			</div>
@@ -119,3 +142,36 @@ foreach ($data['results']['bindings'] as $k => $v) {
 	
 	
 </div>
+
+
+<script>
+
+	$(".poster img").mouseover(function(){
+
+		$(".metadata").hide();
+
+		zindex = $(this).parent().css("z-index");
+		//console.log(zindex);
+		$(this).parent().css("z-index","101");
+
+		$(this).next('.metadata').show();
+
+		$(this).mouseleave(function(){
+			$(this).parent().css("z-index",zindex);
+			$(".metadata").hide();
+		})
+
+	});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+

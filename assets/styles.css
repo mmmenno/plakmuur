@@ -33,3 +33,17 @@ body{
 img{
 	width: 110%;
 }
+.poster .metadata{
+	display: none;
+	background-color: #000;
+	padding: 6px;
+	font-family: "Courier New", Courier, monospace;
+	color: #fff;
+	width: 110%;
+	font-weight: bold;
+	line-height: 1em;
+}
+.metadata h3{
+	font-size: 20px;
+	font-weight: bold;
+}

@@ -12,9 +12,10 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX iisg: <https://iisg.amsterdam/vocab/>
 
-SELECT ?poster ?begin ?name ?thumb WHERE {
+SELECT ?poster ?begin ?name ?creator ?thumb WHERE {
   ?poster a schema:Poster ;
           schema:name ?name ;
+          schema:creator ?creator ;
           foaf:depiction ?thumb ;
           schema:about ?ccFilm .
         
@@ -43,7 +44,8 @@ foreach ($data['results']['bindings'] as $k => $v) {
 	$posters[] = array(
 		"link" => $v['poster']['value'],
 		"img" => $v['thumb']['value'],
-		// "place" => $v['placename']['value'],
+        "begin" => $v['begin']['value'],
+        "creator" => $v['creator']['value'],
 		"title" => $v['name']['value'],
 		// "description" => $v['description']['value']
 	);
@@ -88,15 +90,27 @@ foreach ($data['results']['bindings'] as $k => $v) {
 			$i=0;
 			foreach ($posters as $k => $v) { 
 				$i++;
-				$top = rand(-25,25);
-				$left = rand(-25,25);
-				$z = rand(1,100);
+				$top = rand(-33,33);
+                $left = rand(-30,30);
+                $rotate = rand(-8,8);
+				$z = rand(1,100)
 			?>
 				
 			<div class="col-md-3">
 				
-				<div class="poster" style="margin-top: <?= $top ?>px; z-index: <?= $z ?>; margin-left: <?= $left ?>px;">
-					<img src="<?= $v['img'] ?>" />
+				<div class="poster" style="margin-top: <?= $top ?>%; z-index: <?= $z ?>; margin-left: <?= $left ?>%; transform: rotate(<?= $rotate ?>deg);">
+                    <a href="<?= $v['link'] ?>" style="text-decoration: none;" target="_blank">
+                        <img src="<?= $v['img'] ?>" />
+                    
+                        <div class="metadata">
+                            <h3><?= $v['title'] ?></h3>
+                            <?= $v['description'] ?>
+                            <p>
+                            <?= $v['begin'] ?> | <?= $v['creator'] ?> 
+                            </p>
+                        </div>
+                    </a>
+                    
 				</div>
 
 			</div>
@@ -113,3 +127,25 @@ foreach ($data['results']['bindings'] as $k => $v) {
 	
 	
 </div>
+
+
+<script>
+
+	$(".poster img").mouseover(function(){
+
+		$(".metadata").hide();
+
+		zindex = $(this).parent().parent().css("z-index");
+		//console.log(zindex);
+		$(this).parent().parent().css("z-index","101");
+
+		$(this).next('.metadata').show();
+
+		$(this).mouseleave(function(){
+			$(this).parent().parent().css("z-index",zindex);
+			$(".metadata").hide();
+		})
+
+	});
+
+</script>

@@ -66,16 +66,17 @@
 			
 			<div class="done2" style="margin-top: -3px; margin-left: 3px; transform: rotate(3deg);">
 				<h1>EYE plakmuur</h1>
-				<strong>De eye posters, geschraapt uit ...</strong>
+				<strong>EYE Filmposters, geschraapt uit Het Geheugen van Nederland / Delpher (<a href="https://gist.github.com/LvanWissen/1aa74dee61e85923826b6372a24f9367">script</a>).</strong>
 
 				<br />
 				<br />
 
 				<ul>
 					<li><a href="eye/">bekijk de filmposters!</a></li>
+					<li><a href="eye/?year=1935">year=1935</a></li>
 				</ul>
 				
-				We zijn ook aan het kijken of we deze posters kunnen verbinden met films, en misschien ook met bioscopen. Later meer!
+				We zijn ook aan het kijken of we deze posters kunnen verbinden met films in Cinema Context en daarmee voorstellingen van bioscopen waarin ze vertoond werden. Later meer!
 
 				<br />
 				<br />

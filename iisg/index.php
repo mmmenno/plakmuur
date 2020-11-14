@@ -147,7 +147,7 @@ foreach ($data['results']['bindings'] as $k => $v) {
 <div class="container-fluid">
 	<div class="row">
 		<form style="margin: 550px auto 100px auto; background-color: #fff; border: 1px solid #000; padding: 20px;" action="index.php" method="get">
-			<select name="topic">
+			<select name="topic" style="height: 30px;">
 			<?php
 
 			if (($handle = fopen("topics.csv", "r")) !== FALSE) {
@@ -164,7 +164,10 @@ foreach ($data['results']['bindings'] as $k => $v) {
 			?>
 			</select>
 
-			<button style="background-color: #000; color: #fff; border: none;">nu dit topic</button>
+			<button style="background-color: #000; color: #fff; border: none; height: 30px;">nu dit topic</button>
+			<p style="font-size: 10px">Je kan (daarbij) ook parameters 'year' en 'place' achter de url typen,<br/>
+				als in <a href="index.php?year=1985&place=Amsterdam">index.php?year=1985&place=Amsterdam</a>
+			</p>
 		</form>
 	</div>
 </div>

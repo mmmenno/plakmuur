@@ -29,24 +29,22 @@
 	<div class="row">
 		
 		<div class="col-md-4">
-			
-			<div class="done3" style="margin-top: -8px; transform: rotate(1deg);">
-				<h2>RotterdamsPubliek</h2>
+
+			<div class="doel1" style="margin-top: -8px; transform: rotate(-3deg);">
+				<h1>WAT IS DIT??</h1>
 				<p>
-					<strong>We wilden affiches van het Stadsarchief Rotterdam tonen bij RotterdamsPubliek locaties en op tijdmachine</strong>
-				</p>
-				<p>
-					We hebben <a target="_blank" href="https://github.com/mmmenno/rotterdams-publiek-data/blob/master/data/sa-affiche-links.ttl">131 affiches</a> met de hand aan uitgaansgelegenheden en films verbonden.
+					<strong>Op de HackaLOD 2020 hebben we hier een beetje geprutst met affiches in verschillende collecties</strong>
 				</p>
 
 				<p>
-					Op zaalpagina's als die van <a href="https://rotterdamspubliek.nl/plekken/plek.php?qid=Q76161844" target="_blank">Thalia</a> zie je de met die locatie verbonden affiches. <a href="https://rotterdamspubliek.nl/plekken/" target="_blank">Hier is trouwens een overzicht</a> van alle uitgaansgelegenheden so far (niet allemaal met affiches!).
+					We hebben wat 'plakmuren' gemaakt, zodat we een beeld konden krijgen van wat er zoal te vinden was en hoe we daar op konden query'en. En natuurlijk ook een beetje in de hoop dat anderen het leuk vinden om te bekijken.
 				</p>
-
 				<p>
-					De RotterdamsPubliek tijdmachine toont affiches van dat jaar. De jaren <a href="https://rotterdamspubliek.nl/tijdmachine/?year=1943" target="_blank">1943</a> en die vlak daarvoor hebben de meeste.
+					In de toekomst zouden we affiches graag nog meer en beter verbinden aan locaties en vooral ook aan events: voorstellingen, concerten, tentoonstellingen, etc.
 				</p>
 			</div>
+			
+			
 
 		</div>
 		
@@ -104,28 +102,49 @@
 	</div>
 
 	<div class="row">
-		
 		<div class="col-md-4">
-			
-			<div class="doel1" style="margin-top: -8px; transform: rotate(-3deg);">
-				<h1>Uit in R'dam</h1>
+			<div class="done3" style="margin-top: -8px; transform: rotate(1deg);">
+				<h2>RotterdamsPubliek</h2>
 				<p>
-					<strong>Affiches uit het Stadsarchief verbinden met locaties, films, artiesten</strong>
+					<strong>We wilden affiches van het Stadsarchief Rotterdam tonen bij RotterdamsPubliek locaties en op tijdmachine</strong>
+				</p>
+				<p>
+					We hebben <a target="_blank" href="https://github.com/mmmenno/rotterdams-publiek-data/blob/master/data/sa-affiche-links.ttl">131 affiches</a> met de hand aan uitgaansgelegenheden en films verbonden.
 				</p>
 
 				<p>
-					De niet auteursrechtelijk beschermde affiches zijn, voor zover ze van afbeelding waren voorzien, geschraapt van de website van het Stadsarchief Rotterdam, omgezet naar RDF en gepubliceerd in  <a href="https://druid.datalegend.net/menno/rotterdamspubliek/graphs">Druid</a>
+					Op zaalpagina's als die van <a href="https://rotterdamspubliek.nl/plekken/plek.php?qid=Q76161844" target="_blank">Thalia</a> zie je de met die locatie verbonden affiches. <a href="https://rotterdamspubliek.nl/plekken/" target="_blank">Hier is trouwens een overzicht</a> van alle uitgaansgelegenheden so far (niet allemaal met affiches!).
 				</p>
+
 				<p>
-					Dat zal vooral handmatig werk zijn, maar het is te overzien: er zijn zo'n 1700 affiches en ze staan allemaal onder elkaar in <a href="https://api.druid.datalegend.net/s/yH58nhyU2">deze query</a>
+					De RotterdamsPubliek tijdmachine toont affiches van dat jaar. De jaren <a href="https://rotterdamspubliek.nl/tijdmachine/?year=1943" target="_blank">1943</a> en die vlak daarvoor hebben de meeste.
 				</p>
+			</div>
+		</div>
+		<div class="col-md-4">
+			
+			
+			
+			<div class="done4" style="margin-top: 30px; margin-left: 3px; transform: rotate(4deg);">
+				<h1>NAGO plakmuur</h1>
+				<strong>NAGO, het Nederlands Archief Grafisch Ontwerpers, bevat 3000+ affiches.</strong>
+
+				<br />
+				<br />
+
+				<ul>
+					<li><a href="nago/">bekijk de NAGO affiches hier</a></li>
+				</ul>
+				
+				Later meer info over NAGO hier!
+
+				<br />
 				<br />
 				<br />
 				<br />
 			</div>
 
 		</div>
-		
 		<div class="col-md-4">
 			
 			<div class="doel2" style="margin-top: 16px; margin-left: -23px; transform: rotate(1deg);">
@@ -150,27 +169,44 @@
 			</div>
 
 		</div>
+	</div>
+
+	<div class="row">
 		
 		<div class="col-md-4">
 			
-			<div class="doel3" style=" transform: rotate(-2deg);">
-				<h1>Plakmuur</h1>
-				<strong>Toon een muur met affiches uit een specifiek jaar, en als het even kan ook uit een specifieke stad</strong>
+			
 
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
+		</div>
+		<div class="col-md-4">
+			
+			<div class="doel1" style="margin-top: -40px; transform: rotate(-3deg);">
+				<h1>Uit in R'dam</h1>
+				<p>
+					<strong>Affiches uit het Stadsarchief verbinden met locaties, films, artiesten</strong>
+				</p>
+
+				<p>
+					De niet auteursrechtelijk beschermde affiches zijn, voor zover ze van afbeelding waren voorzien, geschraapt van de website van het Stadsarchief Rotterdam, omgezet naar RDF en gepubliceerd in  <a href="https://druid.datalegend.net/menno/rotterdamspubliek/graphs">Druid</a>
+				</p>
+				<p>
+					Dat zal vooral handmatig werk zijn, maar het is te overzien: er zijn zo'n 1700 affiches en ze staan allemaal onder elkaar in <a href="https://api.druid.datalegend.net/s/yH58nhyU2">deze query</a>
+				</p>
 				<br />
 				<br />
 				<br />
 			</div>
 
 		</div>
+		<div class="col-md-4">
+			
+			
+
+		</div>
+		
+		
+		
+		
 	</div>
 	
 </div>

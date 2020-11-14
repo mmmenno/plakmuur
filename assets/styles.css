@@ -53,6 +53,15 @@ body{
 	color: #fff;
 	font-weight: bold;
 }
+.done4{
+	border: 15px solid #fb6d00;
+	background-image: linear-gradient(#ff0000, #4a5dc8);
+	padding: 20px;
+}
+.done4 a{
+	color: #fff;
+	font-weight: bold;
+}
 
 .poster{
 	position: absolute;

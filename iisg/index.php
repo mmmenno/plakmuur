@@ -144,6 +144,31 @@ foreach ($data['results']['bindings'] as $k => $v) {
 	
 </div>
 
+<div class="container-fluid">
+	<div class="row">
+		<form style="margin: 550px auto 100px auto; background-color: #fff; border: 1px solid #000; padding: 20px;" action="index.php" method="get">
+			<select name="topic">
+			<?php
+
+			if (($handle = fopen("topics.csv", "r")) !== FALSE) {
+			    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+			    	if($_GET['topic']==$data[0]){
+			        	echo "<option selected value=\"" . $data[0] . "\">" . $data[0] . " (" . $data[1] . ")</option>\n";
+			    	}else{
+			        	echo "<option value=\"" . $data[0] . "\">" . $data[0] . " (" . $data[1] . ")</option>\n";
+			    	}
+			    }
+			    fclose($handle);
+			}
+
+			?>
+			</select>
+
+			<button style="background-color: #000; color: #fff; border: none;">nu dit topic</button>
+		</form>
+	</div>
+</div>
+
 
 <script>
 

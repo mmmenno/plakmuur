@@ -1,4 +1,0 @@
-
-{ "head": { "link": [], "vars": ["poster", "begin", "end", "name", "description", "thumb", "tl"] },
-  "results": { "distinct": false, "ordered": true, "bindings": [
-    { "poster": { "type": "uri", "value": "https://iisg.amsterdam/id/item/1482989" }	, "begin": { "type": "typed-literal", "datatype": "http://www.w3.org/2001/XMLSchema#gYear", "value": "1980" }	, "end": { "type": "typed-literal", "datatype": "http://www.w3.org/2001/XMLSchema#gYear", "value": "1985" }	, "name": { "type": "literal", "value": "Rotterdam New Pop 80." }	, "thumb": { "type": "uri", "value": "http://hdl.handle.net/10622/30051003207120?locatt=view:level3" }	, "tl": { "type": "literal", "value": "Music" }} ] } }

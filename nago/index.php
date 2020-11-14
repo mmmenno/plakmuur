@@ -103,16 +103,16 @@ foreach ($data['results']['bindings'] as $k => $v) {
 			$i=0;
 			foreach ($posters as $k => $v) { 
 				$i++;
-				$top = rand(-33,33);
-                $left = rand(-30,30);
-                $rotate = rand(-8,8);
+				$top = rand(-15,15);
+                $left = rand(-15,15);
+                $rotate = rand(-3,3);
 				$z = rand(1,100)
 			?>
 				
 			<div class="col-md-3">
 				
 				<div class="poster" style="margin-top: <?= $top ?>%; z-index: <?= $z ?>; margin-left: <?= $left ?>%; transform: rotate(<?= $rotate ?>deg);">
-					<img src="<?= $v['img'] ?>" />
+					<img src="getimage.php?url=<?= $v['img'] ?>" />
 					<div class="metadata">
 						<h3><?= $v['title'] ?></h3>
 						<?= $v['description'] ?>

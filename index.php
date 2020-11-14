@@ -30,7 +30,23 @@
 		
 		<div class="col-md-4">
 			
-			
+			<div class="done3" style="margin-top: -8px; transform: rotate(1deg);">
+				<h2>RotterdamsPubliek</h2>
+				<p>
+					<strong>We wilden affiches van het Stadsarchief Rotterdam tonen bij RotterdamsPubliek locaties en op tijdmachine</strong>
+				</p>
+				<p>
+					We hebben <a target="_blank" href="https://github.com/mmmenno/rotterdams-publiek-data/blob/master/data/sa-affiche-links.ttl">131 affiches</a> met de hand aan uitgaansgelegenheden en films verbonden.
+				</p>
+
+				<p>
+					Op zaalpagina's als die van <a href="https://rotterdamspubliek.nl/plekken/plek.php?qid=Q76161844" target="_blank">Thalia</a> zie je de met die locatie verbonden affiches. <a href="https://rotterdamspubliek.nl/plekken/" target="_blank">Hier is trouwens een overzicht</a> van alle uitgaansgelegenheden so far (niet allemaal met affiches!).
+				</p>
+
+				<p>
+					De RotterdamsPubliek tijdmachine toont affiches van dat jaar. De jaren <a href="https://rotterdamspubliek.nl/tijdmachine/?year=1943" target="_blank">1943</a> en die vlak daarvoor hebben de meeste.
+				</p>
+			</div>
 
 		</div>
 		
@@ -91,7 +107,7 @@
 		
 		<div class="col-md-4">
 			
-			<div class="doel1" style="margin-top: -8px;">
+			<div class="doel1" style="margin-top: -8px; transform: rotate(-3deg);">
 				<h1>Uit in R'dam</h1>
 				<p>
 					<strong>Affiches uit het Stadsarchief verbinden met locaties, films, artiesten</strong>
@@ -112,7 +128,7 @@
 		
 		<div class="col-md-4">
 			
-			<div class="doel2" style="margin-top: 16px; margin-left: -23px;">
+			<div class="doel2" style="margin-top: 16px; margin-left: -23px; transform: rotate(1deg);">
 				<h1>Inventarisatie</h1>
 				<strong>Welke collecties bevatten (veel) affiches? In hoeverre zijn ze gedateerd? Ingedeeld op onderwerp? Op plaatsnaam?</strong>
 
@@ -137,7 +153,7 @@
 		
 		<div class="col-md-4">
 			
-			<div class="doel3">
+			<div class="doel3" style=" transform: rotate(-2deg);">
 				<h1>Plakmuur</h1>
 				<strong>Toon een muur met affiches uit een specifiek jaar, en als het even kan ook uit een specifieke stad</strong>
 

@@ -88,9 +88,10 @@
 				<ul>
 					<li><a href="eye/">bekijk de filmposters!</a></li>
 					<li><a href="eye/?year=1935">year=1935</a></li>
+					<li><a href="eye/?year=1940&week=&city=Amsterdam&cinema=Alhambra">year=1940&week=&city=Amsterdam&cinema=Alhambra</a></li>
 				</ul>
 				
-				We zijn ook aan het kijken of we deze posters kunnen verbinden met films in Cinema Context en daarmee voorstellingen van bioscopen waarin ze vertoond werden. Later meer!
+				Waar mogelijk is de filmposter verbonden met een film in <a href="http://www.cinemacontext.nl/">Cinema Context</a>. Je kunt per jaar, per week, per stad en per bioscoop de filmposters opvragen van films die toen draaiden. Niet elke combinatie zal evenveel posters opleveren, dus probeer het vooral een aantal keer. 
 
 				<br />
 				<br />

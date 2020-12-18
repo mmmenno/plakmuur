@@ -34,21 +34,34 @@ SELECT DISTINCT ?movie ?poster ?title ?depiction WHERE {
 if(isset($_GET['year']) && !empty($_GET['year'])){
     $sparqlQueryString .= "
     FILTER(year(?date) = " . $_GET['year'] . ")";
+} else {
+
+    $randomyear = rand(1910, 1955);
+
+    $sparqlQueryString .= "
+    FILTER(year(?date) = " . $randomyear . ")";
+    $_GET['year'] = $randomyear ;
 }
 
 if(isset($_GET['week']) && !empty($_GET['week'])){
     $sparqlQueryString .= "
     FILTER(bif:week(?date) = " . $_GET['week'] . ")";
+} else {
+    $_GET['week'] = "" ;
 }
 
 if(isset($_GET['city']) && !empty($_GET['city'])){
     $sparqlQueryString .= "
     FILTER REGEX(?city,\"" . $_GET['city'] . "\",\"i\")";
+} else {
+    $_GET['city'] = "" ;
 }
 
 if(isset($_GET['cinema']) && !empty($_GET['cinema'])){
     $sparqlQueryString .= "
     FILTER REGEX(?cinemaName,\"" . $_GET['cinema'] . "\",\"i\")";
+} else {
+    $_GET['cinema'] = "" ;
 }
   
 $sparqlQueryString .= "
